@@ -1,11 +1,29 @@
-<div class="container">
-  <h1>¿Cual quieres comprar?</h1>
-  <div class="card mx-auto col-md-6">
+<div class="container my-5">
+  <div class="text-center mb-4">
+    <h2 class="display-5">¿Cuál deseas comprar?</h2>
+  </div>
+  <div class="card shadow-sm p-4 mx-auto col-md-6">
     <form #crearCompraForm="ngForm" class="form-group">
-      <select name="cajacubo" #cajacubo class="form-control">
-        <option *ngFor="let cubo of cubos" [value]="cubo.idCubo">{{cubo.nombre}}</option>
-      </select>
-      <button (click)="crearCompra()" class="btn btn-primary">Comprar</button>
+      <div class="mb-3">
+        <label for="cajacubo" class="form-label"><strong>Selecciona un cubo:</strong></label>
+        <select
+          name="cajacubo"
+          #cajacubo
+          id="cajacubo"
+          class="form-select"
+          required
+        >
+          <option value="" disabled selected>Elige un cubo</option>
+          <option *ngFor="let cubo of cubos" [value]="cubo.idCubo">
+            {{ cubo.nombre }}
+          </option>
+        </select>
+      </div>
+      <div class="d-grid">
+        <button (click)="crearCompra()" class="btn btn-primary">
+          Comprar
+        </button>
+      </div>
     </form>
   </div>
 </div>
