@@ -11,24 +11,15 @@
       <li class="nav-item">
         <a class="nav-link"[routerLink]="['/login']">Login</a>
       </li>
-      <li class="nav-item">
-        <button class="nav-link">Registrarse</button>
-      </li>
-      <li class="nav-item">
-        <button class="nav-link">Cerrar Sesión</button>
-      </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Marcas
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" [routerLink]="['/']">Action</a>
-          <a class="dropdown-item" [routerLink]="['/']">Another action</a>
-          <a class="dropdown-item" [routerLink]="['/']">Something else here</a>
+          <a *ngFor="let marca of marcas" class="dropdown-item" [routerLink]="['/marca', marca]">{{marca}}</a>
         </div>
       </li>
     </ul>
   </div>
 </nav>
 
-<!-- al recreo -->

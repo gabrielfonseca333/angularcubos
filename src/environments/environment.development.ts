@@ -1,1 +1,3 @@
-export const environment = {};
+export const environment = {
+  urlApiCubos: "https://apitiendacubos2024a.azurewebsites.net/"
+};

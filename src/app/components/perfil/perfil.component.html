@@ -1,0 +1,19 @@
+<div class="container">
+
+  <h1>Perfil</h1>
+  <p><b>Nombre: </b>{{perfil.nombre}}</p>
+  <p><b>Email: </b>{{perfil.email}}</p>
+  <button (click)="loadCompras()" class="btn btn-primary">Mostrar historial de compras</button>
+  <a [routerLink]="['/comprarcubo']" class="btn btn-danger">Comprar!</a>
+
+  <div *ngIf="compras.length > 0" class="card" style="padding: 20px;">
+    <h2>Historial de compras</h2>
+    <ul>
+      <li *ngFor="let compra of compras">
+        <p>{{compra.idCubo}} - {{compra.fechaPedido}}</p>
+      </li>
+    </ul>
+  </div>
+
+
+</div>

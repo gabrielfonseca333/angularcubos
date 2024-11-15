@@ -1,1 +1,21 @@
-<p>detalle-cubo works!</p>
+<div class="container">
+  <h1>Detalle Cubo</h1>
+
+  <div class="card">
+    <img src={{cubo.imagen}} style="width: 100px">
+    <h2>{{cubo.nombre}}</h2>
+    <p><b>Precio: </b> {{cubo.precio}} €</p>
+    <p><b>Valoracion: </b>{{cubo.valoracion}}</p>
+    <p><b>Marca: </b>{{cubo.marca}}</p>
+  </div>
+
+  <div *ngIf="comentarios.length > 0">
+    <h2 class="h2" style="color:brown;">Comentarios</h2>
+    <ul>
+      <li *ngFor="let comentario of comentarios">
+        {{comentario.comentario}}
+      </li>
+    </ul>
+  </div>
+
+</div>

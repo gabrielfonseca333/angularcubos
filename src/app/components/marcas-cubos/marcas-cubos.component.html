@@ -1,7 +1,6 @@
-<div>
-  <h1>Home</h1>
+<div class="container">
+  <h1>Cubo por marca: {{marca}}</h1>
   <div class="row">
-
     <div class="col-md-3 card" *ngFor="let cubo of cubos">
       <img src={{cubo.imagen}} style="width: 100px">
       <h2>{{cubo.nombre}}</h2>
@@ -9,8 +8,7 @@
       <p><b>Valoracion: </b>{{cubo.valoracion}}</p>
       <a class="btn btn-danger"  [routerLink]="['/detalle-cubo', cubo.idCubo]">Ver detalle</a>
     </div>
-
-    
-
   </div>
+  
+
 </div>

@@ -9,6 +9,11 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { DetalleCuboComponent } from './components/detalle-cubo/detalle-cubo.component';
 import { CrearCuboComponent } from './components/crear-cubo/crear-cubo.component';
+import { FormsModule } from '@angular/forms';
+import ServiceCubos from './services/service.cubos';
+import { MarcasCubosComponent } from './components/marcas-cubos/marcas-cubos.component';
+import { PerfilComponent } from './components/perfil/perfil.component';
+import { CrearCompraComponent } from './components/crear-compra/crear-compra.component';
 
 @NgModule({
   declarations: [
@@ -18,13 +23,17 @@ import { CrearCuboComponent } from './components/crear-cubo/crear-cubo.component
     LoginComponent,
     RegisterComponent,
     DetalleCuboComponent,
-    CrearCuboComponent
+    CrearCuboComponent,
+    MarcasCubosComponent,
+    PerfilComponent,
+    CrearCompraComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [ServiceCubos],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
