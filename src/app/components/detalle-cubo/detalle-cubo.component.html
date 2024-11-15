@@ -1,18 +1,26 @@
-<div class="container">
-  <h1>Detalle Cubo</h1>
+<div class="container my-5">
+  <h1 class="text-center mb-4">Detalle del Cubo</h1>
 
-  <div class="card">
-    <img src={{cubo.imagen}} style="width: 100px">
-    <h2>{{cubo.nombre}}</h2>
-    <p><b>Precio: </b> {{cubo.precio}} €</p>
-    <p><b>Valoracion: </b>{{cubo.valoracion}}</p>
-    <p><b>Marca: </b>{{cubo.marca}}</p>
+  <div class="card mx-auto shadow-lg" style="max-width: 600px;">
+    <div class="row g-0">
+      <div class="col-md-4 text-center p-3">
+        <img src="{{cubo.imagen}}" class="img-fluid rounded-start" alt="{{cubo.nombre}}">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h2 class="card-title">{{cubo.nombre}}</h2>
+          <p class="card-text"><b>Precio: </b>{{cubo.precio}} €</p>
+          <p class="card-text"><b>Valoración: </b>{{cubo.valoracion}}</p>
+          <p class="card-text"><b>Marca: </b>{{cubo.marca}}</p>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <div *ngIf="comentarios.length > 0">
-    <h2 class="h2" style="color:brown;">Comentarios</h2>
-    <ul>
-      <li *ngFor="let comentario of comentarios">
+  <div *ngIf="comentarios.length > 0" class="mt-4">
+    <h2 class="h4 text-secondary">Comentarios</h2>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item" *ngFor="let comentario of comentarios">
         {{comentario.comentario}}
       </li>
     </ul>

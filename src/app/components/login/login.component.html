@@ -1,13 +1,20 @@
-<div class="container">
-  <h1>Login</h1>
-
-  <div class="card">
-    <form #loginForm="ngForm" class="form-group">
-      <input name="cajausuario" #cajausuario type="text" placeholder="Usuario" class="form-control">
-      <input name="cajacontrasena" #cajacontrasena type="password" placeholder="Contraseña" class="form-control">
-      <button (click)="login()" class="btn btn-primary">Login</button>
-    </form>
+<div class="container my-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6 col-lg-4">
+      <div class="card shadow-sm">
+        <div class="card-body p-4">
+          <h2 class="text-center mb-4">Iniciar Sesión</h2>
+          <form #loginForm="ngForm" class="form-group">
+            <div class="mb-3">
+              <input name="cajausuario" #cajausuario type="text" placeholder="Usuario" class="form-control" required>
+            </div>
+            <div class="mb-3">
+              <input name="cajacontrasena" #cajacontrasena type="password" placeholder="Contraseña" class="form-control" required>
+            </div>
+            <button (click)="login()" class="btn btn-primary w-100">Ingresar</button>
+          </form>
+        </div>
+      </div>
+    </div>
   </div>
-
-  
 </div>

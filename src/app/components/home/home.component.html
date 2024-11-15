@@ -1,4 +1,4 @@
-<div>
+<!-- <div>
   <h1>Home</h1>
   <div class="row">
 
@@ -11,6 +11,29 @@
     </div>
 
     
+
+  </div>
+</div> -->
+
+<div class="container my-5">
+  <h1 class="text-center mb-4">Home</h1>
+  <div class="row g-4 justify-content-center">
+
+    <div class="col-md-4 col-lg-3" *ngFor="let cubo of cubos">
+      <div class="card h-100 shadow-sm text-center">
+        <img src="{{cubo.imagen}}" class="card-img-top p-3" alt="{{cubo.nombre}}" style="width: 100%; height: auto;">
+        
+        <div class="card-body">
+          <h5 class="card-title">{{cubo.nombre}}</h5>
+          <p class="card-text"><b>Precio: </b> {{cubo.precio}} €</p>
+          <p class="card-text"><b>Valoración: </b> {{cubo.valoracion}}</p>
+        </div>
+        
+        <div class="card-footer bg-white border-0">
+          <a class="btn btn-danger w-100" [routerLink]="['/detalle-cubo', cubo.idCubo]">Ver detalle</a>
+        </div>
+      </div>
+    </div>
 
   </div>
 </div>
